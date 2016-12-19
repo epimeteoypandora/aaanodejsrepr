@@ -52,12 +52,12 @@ class Population{
         if (indiv.getChromosome().alleles.length==0) throw "ERROR no debería ser cero"
         //TODO
         //Comprobar si el que se inserta es mejor que el peor ¿comprobarlo fuera o dentro?         
-        if (indiv.getFitness()>this.pop[this.worstp].getFitness()){
+    //    if (indiv.getFitness()>this.pop[this.worstp].getFitness()){
            this.pop[this.worstp] = indiv; 
            return this.worstp;
-        } else {
-            return -1;
-        }        
+    //    } else {
+    //        return -1;
+    //    }        
     }   
     replace(indiv,position){//Este método se utiliza sólo cuando Monitor-Esclavo para que el esclavo pueda reemplazar
         this.pop[position] = indiv;         
